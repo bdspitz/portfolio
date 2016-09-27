@@ -1,0 +1,103 @@
+// Place all the styles related to the Pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Helpers
+$white: #fffaf4;
+$black: #070d13;
+$background: #ccdcff;
+$yellow: #ffbb33;
+
+%transition-bg {
+	transition: background 0.5s;
+	-webkit-transition: background 0.5s;
+}
+
+// Pagewide styles
+html, body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	margin: 0;
+	padding: 0;
+	background: $background;
+}
+
+// Header and footer list styles
+.menu li {
+	display: inline-block;
+	list-decoration: none;
+
+	a {
+		color: $black;
+		margin-left: 50px;
+
+		&:hover { text-decoration: none; }
+	}
+}
+
+// Header
+.header {
+	padding: 30px 60px 26px 60px;
+	font-size: 24px;
+
+	.row {
+		margin: 0;
+		padding: 0;
+	}
+
+	p { font-size: 32px; }
+
+	.menu {
+		text-align: right;
+		padding-top: 6px;
+	}
+}
+
+.footer {
+	font-size: 24px;
+	font-weight: 300;
+	padding: 25px 80px;
+
+	.row {
+		text-align: right;
+		padding-top: 25px;
+	}
+
+	.menu li a {
+		margin-left: 40px;
+	}
+}
+
+// Jumbotron
+.jumbotron {
+	
+	background: url(bg.jpg) no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	margin: 0;
+  
+	h1 {
+		padding: 180px 80px 40px 40%;
+		text-align: right;
+		color: $white;
+		font-size: 50px;
+	}
+	  
+	.btn {
+		background: fade-out($black, 0.3);
+		border-radius: 0;
+		border: transparent;
+		color: $white;
+		font-size: 24px;
+		font-weight: 300;
+		padding: 15px 30px;
+		@extend %transition-bg;
+		margin: 0 80px 260px 60px;
+		float: right;
+
+		&:hover {
+	    	background: fade-out($yellow, 0.3);
+			@extend %transition-bg;
+		}
+	}
+}
