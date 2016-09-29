@@ -1,0 +1,50 @@
+<script>
+	jQuery(document).ready(function($) {
+		$('.slider').unslider(
+			{
+				infinite: true,
+				keys: false,
+				arrows: true
+			});
+	});
+</script>
+
+<div class="main">
+	<div class="container slider-container">
+		<div class="slider">
+			<ul>
+				<li><a href="http://bdspitz-nearme.herokuapp.com"><%= image_tag 'screen1.png', :class => 'img-responsive' %></a></li>
+				<li><a href="http://bdspitz-bass.herokuapp.com"><%= image_tag 'screen2.png', :class => 'img-responsive' %></a></li>
+				<li><a href="http://bdspitz-books.herokuapp.com"><%= image_tag 'screen3.png', :class => 'img-responsive' %></a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="supporting">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<a href="http://bdspitz-nearme.herokuapp.com">
+					<%= image_tag 'screen1.png', :class => 'img-responsive' %>
+					<h3>NearMe</h3>
+					<p>Point of interest locator using the MediaWiki API.  Built in AngularJS with the Leaflet library.</p>
+				</a>
+			</div>
+			<div class="col-md-6">
+				<a href="http://bdspitz-nearme.herokuapp.com">
+					<%= image_tag 'screen2.png', :class => 'img-responsive' %>
+					<h3>Bass Music</h3>
+					<p>Album/track viewer for a music cataloging application.  Built in Rails.</p>
+				</a>
+			</div>
+			<div class="col-md-6">
+				<a href="http://bdspitz-nearme.herokuapp.com">
+					<%= image_tag 'screen3.png', :class => 'img-responsive' %>
+					<h3>Bookmarks</h3>
+					<p>Book best-seller list/review aggregator application.  Built in Rails.</p>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>				

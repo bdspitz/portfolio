@@ -2,71 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// Helpers
-$white: #fffaf4;
-$black: #070d13;
-$background: #ccdcff;
-$yellow: #ffbb33;
-
-%transition-bg {
-	transition: background 0.5s;
-	-webkit-transition: background 0.5s;
-}
-
-// Pagewide styles
-html, body {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 500;
-	margin: 0;
-	padding: 0;
-	background: $background;
-}
-
-// Header and footer list styles
-.menu li {
-	display: inline-block;
-	list-decoration: none;
-
-	a {
-		color: $black;
-		margin-left: 50px;
-
-		&:hover { text-decoration: none; }
-	}
-}
-
-// Header
-.header {
-	padding: 30px 60px 26px 60px;
-	font-size: 24px;
-
-	.row {
-		margin: 0;
-		padding: 0;
-	}
-
-	p { font-size: 32px; }
-
-	.menu {
-		text-align: right;
-		padding-top: 6px;
-	}
-}
-
-.footer {
-	font-size: 24px;
-	font-weight: 300;
-	padding: 25px 80px;
-
-	.row {
-		text-align: right;
-		padding-top: 25px;
-	}
-
-	.menu li a {
-		margin-left: 40px;
-	}
-}
+@import 'helpers';
+@import 'unslider';
 
 // Jumbotron
 .jumbotron {
@@ -98,6 +35,105 @@ html, body {
 		&:hover {
 	    	background: fade-out($yellow, 0.3);
 			@extend %transition-bg;
+		}
+	}
+}
+
+
+// Main
+
+.main {
+	background: lighten($background, 6.5%);
+}
+
+// Slider
+.slider {
+	text-align: center;
+	overflow: visible;
+}
+
+.slider-container {
+	position: relative;
+	max-width: 900px;
+	padding-top: 70px;
+	padding-bottom: 35px;
+}
+
+.unslider {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 0;
+
+	img { text-align: center; }
+}
+
+.unslider-arrow {
+    display: block;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    margin-top: -25px;
+    overflow: visible;
+    background: rgba(0,0,0,.6) no-repeat 50% 50%;
+    border-radius: 46px;
+    opacity: .6;
+    transition: opacity .2s;
+    position: absolute;
+
+	color: #fff;
+	font-size: 26px;
+	text-align: center;
+	padding-top: 7px;
+
+	&:hover {
+		text-decoration: none;
+		color: #fff;
+		opacity: .8;
+		transition: opacity .2s;
+	}
+}
+
+.unslider-arrow.next {
+    left: auto;
+    right: -55px;
+    padding-left: 4px;
+}
+
+.unslider-arrow.prev {
+    left: -55px;
+    right: auto;
+    padding-right: 4px;
+}
+
+// Supporting
+.supporting {
+
+	.row { 
+		padding-top: 50px;
+		padding-bottom: 20px;
+	}
+
+	.col-md-6 {
+		padding: 60px 50px 0 50px;
+
+		a {
+			color: $black;
+			transition: color 0.5s;
+
+			h3 {
+				font-size: 30px;
+				text-align: center;
+			}
+
+			p {
+				font-size: 18px;
+				font-weight: 300;
+			}
+
+			&:hover {
+				text-decoration: none;
+				color: darken($yellow, 40%);
+			}
 		}
 	}
 }

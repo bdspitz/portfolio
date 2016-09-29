@@ -11,8 +11,40 @@
 </head>
 
 <body>
+	<div class="header">
 
-<%= yield %>
+		<div class="row">
+			<div class="col-md-3">
+				<p>Brad Spitz</p>
+			</div>
+		    <div class="col-md-9">
+				<ul class="menu">
+					<li><%= link_to 'Welcome', root_path %></li>
+					<li><%= link_to 'Portfolio', portfolio_path %></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+	<%= yield %>
+
+	<div class="footer">
+
+		<div class="row">
+			<ul class="menu">
+				<li><a href="#">GitHub</a></li>
+				<li><a href="#">LinkedIn</a></li>
+				<li><a href="#">Twitter</a></li>
+			</ul>
+		</div>
+		<div class="row">
+			<p>&copy; 2016 Brad Spitz</p>
+		</div>
+
+	</div>
 
 </body>
 </html>
