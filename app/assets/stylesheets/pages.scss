@@ -96,13 +96,13 @@
 .unslider-arrow.next {
     left: auto;
     right: -55px;
-    padding-left: 4px;
+    padding-left: 2px;
 }
 
 .unslider-arrow.prev {
     left: -55px;
     right: auto;
-    padding-right: 4px;
+    padding-right: 2px;
 }
 
 // Supporting
@@ -135,5 +135,34 @@
 				color: darken($yellow, 40%);
 			}
 		}
+	}
+}
+
+// About 
+
+.about-container {
+	max-width: 800px;
+	text-align: center;
+
+	.round-img {
+		border: transparent;
+		border-radius: 50%;
+		height: 360px;
+		width: 360px;
+		margin: 24px;
+	}
+
+	h1 { font-size: 42px; }
+
+	p {
+		font-size: 18px;
+		font-weight: 300;
+		text-align: left;
+		padding-top: 6px;
+	}
+
+	p.disclaimer {
+		margin-top: 80px;
+		font-size: 14px;
 	}
 }
