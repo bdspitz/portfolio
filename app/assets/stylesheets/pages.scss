@@ -8,7 +8,7 @@
 // Jumbotron
 .jumbotron {
 	
-	background: url(http://i.imgur.com/WIJ59VE.jpg) no-repeat center center;
+	background: image-url("bg.jpg") no-repeat center center;
 	background-size: cover;
 	width: 100%;
 	margin: 0;
@@ -96,13 +96,13 @@
 .unslider-arrow.next {
     left: auto;
     right: -55px;
-    padding-left: 2px;
+    padding-left: 4px;
 }
 
 .unslider-arrow.prev {
     left: -55px;
     right: auto;
-    padding-right: 2px;
+    padding-right: 4px;
 }
 
 // Supporting
